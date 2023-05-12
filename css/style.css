@@ -182,31 +182,31 @@
 			.div_header_BANNER_1 img {
 				position: absolute; /* Để logo có thể di chuyển */
 				top: 263px; /* Đưa logo lên trung tâm theo chiều dọc */
-				left: 395px; /* Di chuyển logo sang phải */
+				left: 295px; /* Di chuyển logo sang phải */
 				transform: translate(-50%, -50%); /* Đưa logo về giữa theo chiều ngang và chiều dọc */
 			}
 			.div_header_BANNER_2 img {
 				position: absolute; /* Để logo có thể di chuyển */
 				top: 66px; /* Đưa logo lên trung tâm theo chiều dọc */
-				left: 895px; /* Di chuyển logo sang phải */
+				left: 795px; /* Di chuyển logo sang phải */
 				transform: translate(-50%, -50%); /* Đưa logo về giữa theo chiều ngang và chiều dọc */
 			}
 			.div_header_BANNER_3 img {
 				position: absolute; /* Để logo có thể di chuyển */
 				top: 197px; /* Đưa logo lên trung tâm theo chiều dọc */
-				left: 895px; /* Di chuyển logo sang phải */
+				left: 795px; /* Di chuyển logo sang phải */
 				transform: translate(-50%, -50%); /* Đưa logo về giữa theo chiều ngang và chiều dọc */
 			}
 			.div_header_BANNER_4 img {
 				position: absolute; /* Để logo có thể di chuyển */
 				top: 328px; /* Đưa logo lên trung tâm theo chiều dọc */
-				left: 895px; /* Di chuyển logo sang phải */
+				left: 795px; /* Di chuyển logo sang phải */
 				transform: translate(-50%, -50%); /* Đưa logo về giữa theo chiều ngang và chiều dọc */
 			}
 			.div_header_BANNER_5 img {
 				position: absolute; /* Để logo có thể di chuyển */
 				top: 459px; /* Đưa logo lên trung tâm theo chiều dọc */
-				left: 895px; /* Di chuyển logo sang phải */
+				left: 795px; /* Di chuyển logo sang phải */
 				transform: translate(-50%, -50%); /* Đưa logo về giữa theo chiều ngang và chiều dọc */
 			}
 		</style>
