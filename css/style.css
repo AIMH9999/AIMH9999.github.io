@@ -58,7 +58,7 @@
 			}
 			.div_header_OPTION_SP{
 				float: left; 
-				width: calc(11.8% - 5px); 
+				width: calc(11.8% - 10px); 
 				height: 20px;
 				border-top: 1px solid white;
 				border-right: 1px solid white;
