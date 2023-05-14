@@ -1,0 +1,241 @@
+<style>
+			.div_header_LOGO{
+				width: 100%;
+				height: 100px;				
+			}
+			.div_header_LOGO_left{
+				float: left; 
+				width: 100px; 
+				height: 100px;
+				border: 1px solid black;	
+				background:black;
+				position: relative;				
+			}
+			.div_header_LOGO_left img {
+				position: absolute; /* Để logo có thể di chuyển */
+				top: 50%; /* Đưa logo lên trung tâm theo chiều dọc */
+				left: 50%; /* Di chuyển logo sang phải */
+				transform: translate(-50%, -50%); /* Đưa logo về giữa theo chiều ngang và chiều dọc */
+			}
+			.div_header_LOGO_right{
+				float: left; 
+				width: calc(100% - 104px);
+				height: 100px;
+				border: 1px solid black;	
+				position: relative;				
+			}
+			.div_header_LOGO_right img {
+				position: absolute; /* Để logo có thể di chuyển */
+				top: 50%; /* Đưa logo lên trung tâm theo chiều dọc */
+				left: 50%; /* Di chuyển logo sang phải */
+				transform: translate(-50%, -50%); /* Đưa logo về giữa theo chiều ngang và chiều dọc */
+			}
+			/*PHẦN LỰA CHỌN*/
+			.div_header_OPTION {
+				width: calc(100% - 0px);
+				height: 19px;
+				background : black;
+				clear: both;    
+			}
+			/*Ô TRANG CHỦ*/
+			.div_header_OPTION_TC{
+				float: left; 
+				width: 6%; 
+				height: 18px;
+				border-top: 1px solid white;
+				border-right: 1px solid white;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 18px;				
+				font-size: 13px;
+				background : black;
+			}
+			/*ĐỔI NỀN ĐỎ KHI DI CHUỘT VÀO Ô TRANG CHỦ*/
+			.div_header_OPTION_TC:hover {
+				background-color: red;
+			}
+			.div_header_OPTION_SP{
+				float: left; 
+				width: calc(11.68% - 0px); 
+				height: 20px;
+				border-top: 1px solid white;
+				border-right: 1px solid white;
+				position: relative;	
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 18px;
+				font-size: 13px;
+				background : black;
+			}
+			.div_header_OPTION_SP:hover .dropdown {
+				display: block;
+			}
+			.dropdown {
+				display: none;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				background-color: black;
+				color: black;
+				z-index: 1;
+				width: 100%;
+				white-space: nowrap; 
+			}
+			.dropdown-item {
+				padding-top: 4px;
+				padding-bottom: 4px;
+				text-align: center;
+				background-color: black;
+				border-bottom: 1px solid black;
+			}
+			.dropdown-item a{
+				color: white;
+			}
+			/*.dropdown-item:last-child {
+				border-bottom: none;
+			}*/
+			/*ĐỔI NỀN ĐỎ KHI DI CHUỘT VÀO CÁC Ô SẢN PHẨM*/
+			.div_header_OPTION_SP:hover {
+				background-color: red;
+			}
+			.white-text {
+				color: white;
+			}
+			/*ĐỔI CHỮ THẺ a TRONG TRANG CHỦ THÀNH MÀU TRẮNG*/
+			.div_header_OPTION_TC a {
+				color: white;
+			}
+			/*ĐỔI CHỮ VÀNG KHI DI CHUỘT VÀO Ô TRANG CHỦ*/
+			.div_header_OPTION_TC a:hover {
+				color: yellow;
+			}
+			.div_header_search{
+				float: left; 
+				width: calc(23.6% + 96px); 
+				height: 20px;
+				clear: both;			
+			}
+			.div_header_OPTION_2{
+				width: 100%;
+				height: 20px;
+				clear: both; 
+				background : black;			
+			}
+			.div_header_GT_button{
+				float: left; 
+				width: 6%; 
+				height: 20px;
+				border-top: 1px solid white;
+				border-right: 1px solid white;
+				background : black;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 18px;				
+				font-size: 13px;			
+			}
+			/*ĐỔI NỀN ĐỎ KHI DI CHUỘT VÀO Ô GIƠI THIỆU*/
+			.div_header_GT_button:hover {
+				background-color: red;
+			}
+			/*ĐỔI CHỮ THẺ a TRONG GIƠI THIỆU THÀNH MÀU TRẮNG*/
+			.div_header_GT_button a {
+				color: white;
+			}
+			/*ĐỔI CHỮ VÀNG KHI DI CHUỘT VÀO Ô GIƠI THIỆU*/
+			.div_header_GT_button a:hover {
+				color: yellow;
+			}
+			.div_header_OPTION_CH{
+				float: left; 
+				width: calc(11.68% - 0px); 
+				height: 20px;
+				border-top: 1px solid white;
+				border-right: 1px solid white;
+				position: relative;	
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 18px;
+				font-size: 13px;
+				background : black;
+			}
+			/*ĐỔI NỀN ĐỎ KHI DI CHUỘT VÀO Ô CHÍNH SÁCH CỦA CỬA HÀNG*/
+			.div_header_OPTION_CH:hover {
+				background-color: red;
+			}
+			/*ĐỔI CHỮ THẺ a THÀNH MÀU TRẮNG*/
+			.div_header_OPTION_CH a {
+				color: white;
+			}
+			.div_header_BANNER{
+				float: left;
+				display: inline-block;
+				margin-left: 20%;				
+				width: 1000px; 
+				height: 525px;	
+				position: relative;				
+			}
+			.div_header_BANNER_1 img {
+				display: inline-block;
+				position: absolute; /* Để logo có thể di chuyển */
+				top: 262px; /* Đưa logo lên trung tâm theo chiều dọc */
+				left: 39.3%; /* Di chuyển logo sang phải */
+				transform: translate(-50%, -50%); /* Đưa logo về giữa theo chiều ngang và chiều dọc */
+			}
+			.div_header_BANNER_2 img {
+				position: absolute; /* Để logo có thể di chuyển */
+				top: 66px; /* Đưa logo lên trung tâm theo chiều dọc */
+				left: 89.3%; /* Di chuyển logo sang phải */
+				transform: translate(-50%, -50%); /* Đưa logo về giữa theo chiều ngang và chiều dọc */
+			}
+			.div_header_BANNER_3 img {
+				position: absolute; /* Để logo có thể di chuyển */
+				top: 197px; /* Đưa logo lên trung tâm theo chiều dọc */
+				left: 89.3%; /* Di chuyển logo sang phải */
+				transform: translate(-50%, -50%); /* Đưa logo về giữa theo chiều ngang và chiều dọc */
+			}
+			.div_header_BANNER_4 img {
+				position: absolute; /* Để logo có thể di chuyển */
+				top: 328px; /* Đưa logo lên trung tâm theo chiều dọc */
+				left: 89.3%; /* Di chuyển logo sang phải */
+				transform: translate(-50%, -50%); /* Đưa logo về giữa theo chiều ngang và chiều dọc */
+			}
+			.div_header_BANNER_5 img {
+				position: absolute; /* Để logo có thể di chuyển */
+				top: 459px; /* Đưa logo lên trung tâm theo chiều dọc */
+				left: 89.3%; /* Di chuyển logo sang phải */
+				transform: translate(-50%, -50%); /* Đưa logo về giữa theo chiều ngang và chiều dọc */
+			}
+			.GT_CH {
+				float: left;
+				display: inline-block;
+				margin-left: 20%;
+				padding-left: 10px;
+				padding-right: 10px;
+				width: 980px;
+				height: 100%;
+			}
+			.TT {
+				float: left;
+				display: inline-block;
+				margin-left: 20%;
+				padding-left: 10px;
+				padding-right: 10px;
+				width: 980px;
+				height: 100%;
+			}
+			.TG {
+				float: left;
+				display: inline-block;
+				margin-left: 20%;
+				padding-left: 10px;
+				padding-right: 10px;
+				width: 980px;
+				height: 100%;
+			}
+		</style>
