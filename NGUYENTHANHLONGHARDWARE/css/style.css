@@ -1,0 +1,707 @@
+<style>
+			.div_header_LOGO{
+				width: 100%;
+				height: 100px;				
+			}
+			.div_header_LOGO_left{
+				float: left; 
+				width: 100px; 
+				height: 100px;
+				border: 1px solid black;	
+				background:black;
+				position: relative;				
+			}
+			.div_header_LOGO_left img {
+				position: absolute; /* Để logo có thể di chuyển */
+				top: 50%; /* Đưa logo lên trung tâm theo chiều dọc */
+				left: 50%; /* Di chuyển logo sang phải */
+				transform: translate(-50%, -50%); /* Đưa logo về giữa theo chiều ngang và chiều dọc */
+			}
+			.div_header_LOGO_right{
+				float: left; 
+				width: calc(100% - 104px);
+				height: 100px;
+				border: 1px solid black;	
+				position: relative;				
+			}
+			.div_header_LOGO_right img {
+				position: absolute; /* Để logo có thể di chuyển */
+				top: 50%; /* Đưa logo lên trung tâm theo chiều dọc */
+				left: 50%; /* Di chuyển logo sang phải */
+				transform: translate(-50%, -50%); /* Đưa logo về giữa theo chiều ngang và chiều dọc */
+			}
+			/*PHẦN LỰA CHỌN*/
+			.div_header_OPTION {
+				width: calc(100% - 0px);
+				height: 19px;
+				background : #2a3037;
+				clear: both;    
+			}
+			/*Ô TRANG CHỦ*/
+			.div_header_OPTION_TC{
+				float: left; 
+				width: 6%; 
+				height: 18px;
+				border-top: 1px solid white;
+				border-right: 1px solid white;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 18px;				
+				font-size: 13px;
+				background : #2a3037;
+			}
+			/*ĐỔI NỀN ĐỎ KHI DI CHUỘT VÀO Ô TRANG CHỦ*/
+			.div_header_OPTION_TC:hover {
+				background-color: red;
+			}
+			.div_header_OPTION_SP{
+				float: left; 
+				width: calc(11.64% - 0px); 
+				height: 20px;
+				border-top: 1px solid white;
+				border-right: 1px solid white;
+				position: relative;	
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 18px;
+				font-size: 13px;
+				background : #2a3037;
+			}
+			.div_header_OPTION_SP:hover .dropdown {
+				display: block;
+			}
+			.dropdown {
+				display: none;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				background-color: #2a3037;
+				color: #2a3037;
+				z-index: 1;
+				width: 100%;
+				white-space: nowrap; 
+			}
+			.dropdown-item {
+				padding-top: 4px;
+				padding-bottom: 4px;
+				text-align: center;
+				background-color: #2a3037;
+				border-bottom: 1px solid #2a3037;
+			}
+			.dropdown-item a{
+				color: white;
+			}
+			/*.dropdown-item:last-child {
+				border-bottom: none;
+			}*/
+			/*ĐỔI NỀN ĐỎ KHI DI CHUỘT VÀO CÁC Ô SẢN PHẨM*/
+			.div_header_OPTION_SP:hover {
+				background-color: red;
+			}
+			.white-text {
+				color: white;
+			}
+			.back-text {
+				color: black;
+			}
+			.BH-text {
+				color: rgb(247, 192, 81);
+			}
+			.TT_SP-text {
+				color: rgb(89, 176, 89);
+			}
+			/*ĐỔI CHỮ THẺ a TRONG TRANG CHỦ THÀNH MÀU TRẮNG*/
+			.div_header_OPTION_TC a {
+				color: white;
+			}
+			/*ĐỔI CHỮ VÀNG KHI DI CHUỘT VÀO Ô TRANG CHỦ*/
+			.div_header_OPTION_TC a:hover {
+				color: yellow;
+			}
+			.div_header_search{
+				float: left; 
+				width: calc(23.6% + 96px); 
+				height: 20px;
+				clear: both;			
+			}
+			.div_header_OPTION_2{
+				width: 100%;
+				height: 20px;
+				clear: both; 
+				background : #2a3037;			
+			}
+			.div_header_GT_button{
+				float: left; 
+				width: 6%; 
+				height: 20px;
+				border-top: 1px solid white;
+				border-right: 1px solid white;
+				background : #2a3037;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 18px;				
+				font-size: 13px;			
+			}
+			/*ĐỔI NỀN ĐỎ KHI DI CHUỘT VÀO Ô GIƠI THIỆU*/
+			.div_header_GT_button:hover {
+				background-color: red;
+			}
+			/*ĐỔI CHỮ THẺ a TRONG GIƠI THIỆU THÀNH MÀU TRẮNG*/
+			.div_header_GT_button a {
+				color: white;
+			}
+			/*ĐỔI CHỮ VÀNG KHI DI CHUỘT VÀO Ô GIƠI THIỆU*/
+			.div_header_GT_button a:hover {
+				color: yellow;
+			}
+			.div_header_OPTION_CH{
+				float: left; 
+				width: calc(11.64% - 0px); 
+				height: 20px;
+				border-top: 1px solid white;
+				border-right: 1px solid white;
+				position: relative;	
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 18px;
+				font-size: 13px;
+				background : #2a3037;
+			}
+			/*ĐỔI NỀN ĐỎ KHI DI CHUỘT VÀO Ô CHÍNH SÁCH CỦA CỬA HÀNG*/
+			.div_header_OPTION_CH:hover {
+				background-color: red;
+			}
+			/*ĐỔI CHỮ THẺ a THÀNH MÀU TRẮNG*/
+			.div_header_OPTION_CH a {
+				color: white;
+			}
+			.div_header_BANNER{
+				display: inline-block;				
+				width: 50%; 
+				height: 100%;	
+				padding-left: 25%;
+				padding-right: 25%;		
+				padding-top: 10px;
+			}
+			.div_header_BANNER_1{
+				float: left;
+				display: inline-block;
+				width: 100%;
+				height: 130%;				
+			}
+			.div_header_BANNER_1 p{
+				margin: 0%;
+			}
+			/*
+			.div_header_BANNER_2{
+				float: left;
+				display: inline-block;
+				width: 17.3%;							
+			}
+			.div_header_BANNER_2 p{
+				margin: 0%;
+			}
+			.div_header_BANNER_3{
+				float: left;
+				display: inline-block;
+				width: 17.3%;	
+			}
+			.div_header_BANNER_3 p{
+				margin: 0%;
+			}
+			.div_header_BANNER_4{
+				float: left;
+				display: inline-block;
+				width: 17.3%;				
+			}
+			.div_header_BANNER_4 p{
+				margin: 0%;
+			}
+			.div_header_BANNER_5{
+				float: left;
+				display: inline-block;
+				width: 17.3%;				
+			}
+			.div_header_BANNER_5 p{
+				margin: 0%;
+			}
+			.div_header_BANNER_1 img {
+				display: inline-block;
+				position: absolute; Để logo có thể di chuyển 
+				top: 262px;  Đưa logo lên trung tâm theo chiều dọc 
+				left: 39.3%; Di chuyển logo sang phải 
+				transform: translate(-50%, -50%); /* Đưa logo về giữa theo chiều ngang và chiều dọc 
+			}*/	
+			.GT_CH {
+				padding-left: 10px;
+				padding-right: 10px;
+				width: 980px;
+				height: 100%;
+				margin: 0 auto;
+			}
+			.TT {
+				margin: 0 auto;
+				padding-left: 10px;
+				padding-right: 10px;
+				width: 980px;
+				height: 100%;
+			}
+			.TG {
+				margin: 0 auto;
+				padding-left: 10px;
+				padding-right: 10px;
+				width: 980px;
+				height: 100%;
+			}
+			.VC {
+				margin: 0 auto;
+				padding-left: 10px;
+				padding-right: 10px;
+				width: 980px;
+				height: 100%;
+			}
+			table,  th,  td  {
+				border:  1px  solid  black;
+			  }
+			th{
+				width: 180px;
+				background-color: #3b94f3;
+			}
+			table  {
+				border-collapse:  collapse;
+				width: 100%;
+			}
+			th{
+				text-align: center;
+				height: 60px;
+			}
+			td{
+				text-align: center;
+				height: 60px;
+			}
+			.TT_SP{
+				margin: 0 auto;
+				width: 980px;
+				height: 100%;
+			}
+			.A_SP{
+				float: left;
+				display: inline-block;
+				position: relative;	
+				width: 350px;
+				height: 350px;
+				border: 1px solid  #005ec4;
+			}
+			.A_SP_IMG img {
+				position: absolute; /* Để logo có thể di chuyển */
+				top: 50%; /* Đưa logo lên trung tâm theo chiều dọc */
+				left: 50%; /* Di chuyển logo sang phải */
+				transform: translate(-50%, -50%); /* Đưa logo về giữa theo chiều ngang và chiều dọc */				
+			}
+			.MT_SP_CPU{
+				display: inline-block;
+				float: left;
+				width: 620px;
+				height: 100%;
+				margin-left: 3px;
+			}
+			.TT_MT_SP_CPU{
+				display: inline-block;
+				float: left;
+				padding-left: 40px;
+				padding-bottom: 10px;
+			}	
+			.TT_MT_SP_CPU h1{
+				font-size: 25px;
+				color:  #005ec4;
+			}
+			.SL_MT_SP_CPU{
+				display: inline-block;
+				float: left;
+				padding-left: 40px;
+				padding-right: 20px;
+				width: calc(100% - 45px);
+			}
+			.SL_SP{
+				float: left;
+				display: inline-block;
+				width: 35%;
+				padding-bottom: 5px;
+				padding-top: 5px;
+			}
+			.TVGH_MH_SP_CPU{
+				display: inline-block;
+				float: left;
+			}
+			.TVGH{
+				display: inline-block;
+				float: left;
+				margin-left: 40px;
+				height: 50px;
+				width: 250px;
+				border: 2px solid #005ec4;
+				color: #005ec4;
+				background-color: white;
+			}
+			.TVGH:hover{
+				border: 2px solid rgb(247, 192, 81);
+				color: rgb(247, 192, 81);	
+				cursor: pointer;			
+			}
+			.MH{
+				display: inline-block;
+				float: left;
+				margin-left: 50px;
+				height: 50px;
+				width: 250px;
+				border: 2px solid  #005ec4;
+				background-color:  #005ec4;
+				color: white;
+			}
+			.MH:hover{
+				border: 2px solid #3b94f3;
+				background-color: #3b94f3;
+				color: rgb(247, 192, 81);	
+				cursor: pointer;			
+			}
+			.CS_SP{
+				display: inline-block;
+				float: left;
+				margin-top: 50px;
+			}
+			.CS_SP_1{
+				display: inline-block;
+				float: left;
+				padding-top: 10px;
+				margin-left: 30px;
+				height: 90px;
+				width: 200px;
+				text-align: center;
+				background-color: #eaeef9;
+				font-size: 18px;
+			}
+			.CS_SP_2{
+				display: inline-block;
+				float: left;
+				padding-top: 10px;
+				margin-left: 40px;
+				height: 90px;
+				width: 200px;
+				text-align: center;
+				background-color: #eaeef9;
+				font-size: 18px;
+			}
+			.CS_SP_3{
+				display: inline-block;
+				float: left;
+				padding-top: 10px;
+				margin-left: 40px;
+				height: 90px;
+				width: 200px;
+				text-align: center;
+				background-color: #eaeef9;
+				font-size: 18px;
+			}
+			.CS_SP_4{
+				display: inline-block;
+				float: left;
+				padding-top: 10px;
+				margin-left: 40px;
+				height: 90px;
+				width: 200px;
+				text-align: center;
+				background-color: #eaeef9;
+				font-size: 18px;
+			}
+			.TTSP_block{
+				display: inline-block;
+				float: left;
+				width: 100%;
+				height: 100px;
+				text-align: center;
+			}
+			.MTCTSP{
+				display: inline-block;
+				float: left;
+				padding-left: 30px;
+				padding-right: 30px;
+			}
+			.text-center{
+				text-align: center;
+			}
+			.footer_CS{
+				float: left;
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+				margin-top: 50px;
+				background-color: #005ec4;
+			}
+			.footer_CS_1{
+				float: left;
+				text-align: center;
+				padding-left: 20px;
+				display: inline-block;
+				width: calc(25% - 5px);
+				height: 100px;
+				border-bottom: 1px solid white;
+			}
+			.footer_CS_2{
+				float: left;
+				text-align: center;
+				display: inline-block;
+				width: calc(25% - 5px);;
+				height: 100px;
+				border-bottom: 1px solid white;
+			}
+			.footer_CS_3{
+				float: left;
+				text-align: center;
+				display: inline-block;
+				width: calc(25% - 5px);
+				height: 100px;
+				border-bottom: 1px solid white;
+			}
+			.footer_CS_4{
+				float: left;
+				text-align: center;
+				display: inline-block;
+				width: calc(25% - 5px);
+				height: 100px;
+				border-bottom: 1px solid white;
+			}
+			.footer_about{
+				float: left;
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+				background-color: #b7b8bc;
+			}
+			.footer_about_1{
+				float: left;
+				padding-left: 20px;
+				display: inline-block;
+				width: calc(25% - 5px);
+				height: 250px;
+				border-bottom: 1px solid white;
+			}
+			.footer_about_2{
+				float: left;
+				display: inline-block;
+				width: calc(25% - 5px);
+				height: 250px;
+				border-bottom: 1px solid white;
+			}
+			.footer_about_3{
+				float: left;
+				display: inline-block;
+				width: calc(25% - 5px);
+				height: 250px;
+				border-bottom: 1px solid white;
+			}
+			.footer_about_4{
+				float: left;
+				display: inline-block;
+				width: calc(25% - 5px);
+				height: 250px;
+				border-bottom: 1px solid white;
+			}
+			.footer_about_4 p{
+				color: black;
+			}
+			.footer_end{
+				float: left;
+				padding-left: 20px;
+				display: inline-block;
+				background-color: #2a3037;
+				width: calc(100% - 20px);
+			}
+			.SP_TC{
+				display: inline-block;
+				float: left;
+				display: inline-block;
+				height: 100%;
+				width: 100%;
+			}
+			.LK_SP_TC{
+				display: flex;
+  				justify-content: center;
+				align-items: center;
+				margin-left: -0.5%;
+				width: 100%;
+			}
+			.LK_SP_TC_1{
+				float: left;
+				border: 3px solid rgb(219, 216, 216);
+				width: 220px;
+				height: 400px;
+			}
+			.LK_SP_TC_1:hover{
+				background-color: #141450;
+				border: 3px solid #141450;
+				color:white;
+			}
+			.LK_SP_TC_2{
+				float: left;
+				border: 3px solid rgb(219, 216, 216);
+				width: 220px;
+				height: 400px;
+				margin-left: 1%;
+			}
+			.LK_SP_TC_2:hover{
+				background-color: #141450;
+				border: 3px solid #141450;
+				color:white;
+			}
+			.LK_SP_TC_3{
+				float: right;
+				border: 3px solid rgb(219, 216, 216);
+				width: 220px;
+				height: 400px;
+				margin-left: 1%;
+			}
+			.LK_SP_TC_3:hover{
+				background-color: #141450;
+				border: 3px solid #141450;
+				color:white;
+			}
+			.LK_SP_TC_4{
+				float: left;
+				border: 3px solid rgb(219, 216, 216);
+				width: 220px;
+				height: 400px;
+				margin-left: 1%;
+			}
+			.LK_SP_TC_4:hover{
+				background-color: #141450;
+				border: 3px solid #141450;
+				color:white;
+			}
+			.A_SP_TC{
+				float: left;
+				display: inline-block;
+				position: relative;	
+				width: 200px;
+				height: 200px;
+				margin-left: 10px;
+				margin-bottom: 40px;
+			}
+			.A_SP_TC img {
+				position: absolute; /* Để logo có thể di chuyển */
+				top: calc(50% + 10px); /* Đưa logo lên trung tâm theo chiều dọc */
+				left: calc(50% - 0.5px); /* Di chuyển logo sang phải */
+				transform: translate(-50%, -50%); /* Đưa logo về giữa theo chiều ngang và chiều dọc */				
+			}
+			.MT_SP_TC{
+				display: inline-block;
+				float: left;
+				width: 200px;
+				height: 60px;
+				padding: 10px;
+				font-size: 17px;
+			}
+			.G_SP_TC{
+				display: inline-block;
+				float: left;
+				width: 200px;
+				height: 30px;
+				padding-left: 10px;
+			}
+			.G_SP_TC p{
+				margin-top: 1px;
+				color:red;
+				font-size: 23px;
+			}
+			.MH_TC{
+				display: inline-block;
+				float: left;
+				margin-left: 10px;
+				height: 40px;
+				width: 200px;
+				border: 2px solid  #005ec4;
+				background-color:  #005ec4;
+				color: white;
+			}
+			.MH_TC:hover{
+				border: 2px solid red;
+				background-color: rgb(61, 128, 222);	
+				color:  #a02222;	
+				cursor: pointer;			
+			}
+			.no-color {
+				color: inherit; /* Đặt màu chữ giống với phần tử cha */
+				text-decoration: none; /* Loại bỏ gạch chân */
+			}
+			.DMSP{
+				clear: both;
+				text-align: center;
+				padding-top: 20px;
+				font-size: 200%;
+			}
+			.DMSP_CT{
+				clear: both;
+				text-align: center;
+				color: #a16813;
+				font-size: 130%;
+				padding-bottom: 10px;
+				padding-top: 10px;
+			}
+			.DM_SP{				
+				font-size: 130%;
+				padding-top: 20px;
+				padding-bottom: 10px;
+				color: #005ec4;
+				text-align: center;
+				clear: both;
+			}
+			. BODY{
+				height: 100%;
+				width: 100%;
+				display: flex;
+  				justify-content: center;
+  				align-items: center;
+			}
+			header{
+				padding-bottom: 10px;
+			}
+			@media(max-width: 768px){
+				.div_header_OPTION_SP{
+					float: left; 
+					width: calc(11.4% - 0px); 
+					height: 20px;
+					border-top: 1px solid white;
+					border-right: 1px solid white;
+					position: relative;	
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 18px;
+					font-size: 5px;
+					background : #2a3037;
+				}
+
+				.div_header_OPTION_CH{
+					float: left; 
+					width: calc(11.4% - 0px); 
+					height: 20px;
+					border-top: 1px solid white;
+					border-right: 1px solid white;
+					position: relative;	
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 18px;
+					font-size: 5px;
+					background : #2a3037;
+				}
+				.div_header_OPTION_SP:focus .dropdown {
+					display: block;
+				}
+			}
+			
